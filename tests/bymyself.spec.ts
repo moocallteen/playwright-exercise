@@ -13,7 +13,7 @@ const TODO_ITEMS = [
   "book a doctors appointment",
 ];
 
-test.describe("New Todo", () => {
+test.describe("New Todo", () => { 
   test.skip("test run", async ({ page }) => {
     // create a new todo locator
     const newTodo = page.getByPlaceholder("What needs to be done?");
@@ -54,7 +54,7 @@ test.describe("GitLab page tests", () => {
     await page.getByTestId(`new-user-last-name-field`).fill("OOO1Testing");
   });
 
-  test.only("Using Various Locator Methods", async ({ page }) => {
+  test("Using Various Locator Methods", async ({ page }) => {
     await page.setViewportSize({
       width: 640,
       height: 480,
@@ -65,7 +65,7 @@ test.describe("GitLab page tests", () => {
     await page.getByRole(`link`, {name: "Sign in"}).click();
   });
 
-  test.only("Sign in from the main page", async ({ page }) => {
+  test("Sign in from the main page", async ({ page }) => {
     await page.goto("https://gitlab.com/");
     await page.click(`button[id="onetrust-accept-btn-handler"]`);
     await page.click(`:has-text("Sign in")`);
