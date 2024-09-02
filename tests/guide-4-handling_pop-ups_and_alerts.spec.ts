@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe("Pop-ups tests", () => {
   let alertMessage;
-  test("Handling alerts", async ({ page }) => {
+  test("Confirm alert", async ({ page }) => {
     await page.on(`dialog`, async (dialog) => {
       expect(dialog.type()).toBe(`alert`);
       alertMessage = await dialog.message();
@@ -24,7 +24,7 @@ test.describe("Pop-ups tests", () => {
     expect(alertMessage).toBe("This is a simple alert.");
   });
 
-  test("Confirm alert", async ({ page }) => {
+  test("Dismiss alert", async ({ page }) => {
     await page.on(`dialog`, async (dialog) => {
       alertMessage = await dialog.message();
       await page.waitForTimeout(3000);
@@ -43,7 +43,7 @@ test.describe("Pop-ups tests", () => {
     await page.waitForLoadState();
 
 // if(popup.url() === "example url"){
-
+// add logic here
 // }
 
     await popup.close();
