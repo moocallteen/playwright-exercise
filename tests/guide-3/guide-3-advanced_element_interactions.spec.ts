@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
   });
 
   await page.goto(
-    "file:///Users/dmitrykukarin/Documents/AQA-files/play-playwright/tests/guide-3-files/index.html"
+    "file:///Users/dmitrykukarin/Documents/AQA-files/play-playwright/tests/guide-3/index.html"
   );
 });
 
