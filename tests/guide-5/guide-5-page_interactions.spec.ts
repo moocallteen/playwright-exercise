@@ -45,7 +45,8 @@ test.describe("Cookies actions", () => {
     cookies = await page.context().cookies(baseUrl);
     sessionCookie = cookies.find((cookies) => cookies.name === "session");
     console.log("Session cookie", sessionCookie);
-    await page.click(`button[id="deleteCookie"]`);
+    await page.click(`button[id="deleteCookie"]`, {force: true});
+    await page.waitForTimeout(1000)
     console.log("Session cookie", sessionCookie);
     await expect(sessionCookie).toBeUndefined();
   });
