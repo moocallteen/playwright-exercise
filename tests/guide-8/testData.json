@@ -1,0 +1,21 @@
+[
+    {
+        "testName": "Positive Test 1 - Fill input",
+        "userName": "Posi Tive",
+        "userAge": "25",
+        "isStudent": true,
+        "expectedUserName": "Posi Tive",
+        "expectedUserAge": "25",
+        "expectedStudentStatus": "Yes"
+}, 
+
+{
+    "testName": "Negative Test 1 - Fill input",
+        "userName": "Nega Tive",
+        "userAge": "31",
+        "isStudent": false,
+        "expectedUserName": "Nega Tive",
+        "expectedUserAge": "31",
+        "expectedStudentStatus": "No"
+
+}]

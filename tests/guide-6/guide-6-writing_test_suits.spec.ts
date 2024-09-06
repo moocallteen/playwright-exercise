@@ -14,8 +14,8 @@ const testData = {
 
 test.beforeEach(async ({ page }) => {
   await page.setViewportSize({
-    width: 1920,
-    height: 1080,
+    width: 1440,
+    height: 900,
   });
 
   await page.goto(baseUrl);
